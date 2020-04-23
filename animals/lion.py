@@ -1,8 +1,8 @@
-"""A sheep."""
+"""A lion."""
 
 import animal
 
-class Sheep(animal.Animal):
+class Lion(animal.Animal):
 
     def __init__(self):
         self.kind = 'dog'
