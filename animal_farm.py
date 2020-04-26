@@ -11,7 +11,9 @@ from animals import leopard
 import animal
 import farm
 
+
 def make_animal(kind):
+    """make animal"""
     if kind == 'cat':
         return cat.Cat()
     if kind == 'dog':
@@ -20,12 +22,16 @@ def make_animal(kind):
         return sheep.Sheep()
     if kind == 'leopard':
         return leopard.Leopard()
+    return animal.Animal(kind)
+
 
 def main(animals):
+    """main"""
     animal_farm = farm.Farm()
     for animal_kind in animals:
         animal_farm.add_animal(make_animal(animal_kind))
     animal_farm.print_contents()
+
 
 if __name__ == '__main__':
     if len(sys.argv) == 1:
